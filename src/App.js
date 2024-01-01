@@ -5,14 +5,14 @@ import { useState } from "react";
 import Countdown from "react-countdown";
 
 function App() {
-  const [newYearMessage, setNewYearMessage] = useState(["Menunggu Tahun Baru 2024!🎉🎉", "Bye 2023👋"]);
+  const [newYearMessage, setNewYearMessage] = useState(["Menunggu Tahun Baru 2025!🎉🎉", "Bye 2024👋"]);
 
   const particlesInitialization = async(engine) => {
     await loadFireworksPreset(engine)
   }
 
   function timeLeft() {
-    const newYearDate = new Date("January 1, 2024 00:00:00").getTime()
+    const newYearDate = new Date("January 1, 2025 00:00:00").getTime()
     const nowDate = new Date().getTime()
     const remainingTime = newYearDate - nowDate
     return remainingTime
@@ -34,7 +34,7 @@ function App() {
         </span>
         <div className="z-50 text-white font-bold text-2xl">
           <Countdown date={Date.now() + timeLeft()} onComplete={() => setNewYearMessage([
-            "🎉🎉Selamat Tahun Baru 2024🎉🎉", "Awal yang sempurna untuk meraih impian✨✨"
+            "🎉🎉Selamat Tahun Baru 2025🎉🎉", "Awal yang sempurna untuk meraih impian✨✨"
           ])}/>
         </div>
       </div>
